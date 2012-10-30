@@ -2,11 +2,14 @@
 # from a script written for this article:
 # http://simplystatistics.org/post/34635539704/on-weather-forecasts-nate-silver-and-the
 
+# This is a highly simplified simulation that does not account for the electoral college.
 
 # Set the estimated percent for Obama
+# based on the average of several national polls
 proportionObama = 0.505
 
 # Set the standard deviation
+# this measures the variability between the different polls.
 sdObama = 0.01
 
 # Function to simulate a single election
