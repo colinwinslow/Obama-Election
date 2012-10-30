@@ -1,4 +1,5 @@
-# Adapted for ISTA 116 from a script written for this article:
+# Adapted for ISTA 116 at the University of Arizona's School of Information Science
+# from a script written for this article:
 # http://simplystatistics.org/post/34635539704/on-weather-forecasts-nate-silver-and-the
 
 
