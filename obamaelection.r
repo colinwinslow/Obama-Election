@@ -6,16 +6,16 @@
 
 # Set the estimated percent for Obama
 # based on the average of several national polls
-proportionObama = 0.505
+proportionObama = ?
 
 # Set the standard deviation
 # this measures the variability between the different polls.
-sdObama = 0.01
+sdObama = ?
 
 # Function to simulate a single election
 simulateElection <- function(prop,sd){
   return(rnorm(1,mean=prop,sd=sd))
-}
+}t
 
 # Simulate the percent Obama in 1000 elections
 simulatedProportionObama = replicate(1000, simulateElection(proportionObama,sdObama))
