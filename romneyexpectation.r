@@ -31,15 +31,18 @@ romneyPercent = c(
   )
 
 simulateVote = function(n){
-  #returns TRUE when Romney wins
+  # returns TRUE when Romney wins
+  # This is actually a really inefficient way of doing this; we could use what we know about bernoulli
+  # random variables to avoid having to run all these simulations. But running simulations is more 
+  # satisfying, right?
   result = sample(c("Romney","Obama"),size=1000,replace=T,prob = c(romneyPercent[n],1-romneyPercent[n]))
   return(length(result[result=='Romney'])>500)
 }
 
 simulateElections = function(n){
   #runs 1000 state elections and returns the proportion that Romney wins
-  tf = replicate(1000,simulateVote(n))
-  return(length(tf[tf==T])/1000)
+  tf = replicate(2000,simulateVote(n))
+  return(length(tf[tf==T])/2000)
   
 }
 
@@ -55,6 +58,8 @@ romneyChanceOfWin = c(
   simulateElections(9)
   )
 names(romneyChanceOfWin) = c("AZ","CO","FL","NC","NH","OH","PA","VA","WI")
+
+print(romneyChanceOfWin)
 
 
 #### Now that we have a reasonable idea how likely Romney is to win each state,
